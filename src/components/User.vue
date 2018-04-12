@@ -2,6 +2,7 @@
     <div class="component">
         <h1>The User Component</h1>
         <p>I'm an awesome User!</p>
+        <button @click="changeName">Change Name</button>
         <hr>
         <div class="row">
             <div class="col-xs-12 col-sm-6">
@@ -23,6 +24,11 @@ export default {
     return {
       name: "Max"
     };
+  },
+  methods: {
+    changeName() {
+      this.name = "Anna";
+    }
   },
   components: {
     appUserDetail: UserDetail,
